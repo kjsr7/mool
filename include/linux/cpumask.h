@@ -257,9 +257,9 @@ extern int cpumask_next_wrap(int n, const struct cpumask *mask, int start, bool 
  *
  * After the loop, cpu is >= nr_cpu_ids.
  */
-#define for_each_cpu_and(cpu, mask, and)				\
+#define for_each_cpu_and(cpu, mask, and_var)				\
 	for ((cpu) = -1;						\
-		(cpu) = cpumask_next_and((cpu), (mask), (and)),		\
+		(cpu) = cpumask_next_and((cpu), (mask), (and_var)),		\
 		(cpu) < nr_cpu_ids;)
 #endif /* SMP */
 

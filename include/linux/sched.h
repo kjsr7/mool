@@ -168,7 +168,7 @@ struct task_group;
 
 extern cpumask_var_t			cpu_isolated_map;
 
-extern void scheduler_tick(void);
+void scheduler_tick(void);
 
 #define	MAX_SCHEDULE_TIMEOUT		LONG_MAX
 
@@ -177,7 +177,7 @@ extern long schedule_timeout_interruptible(long timeout);
 extern long schedule_timeout_killable(long timeout);
 extern long schedule_timeout_uninterruptible(long timeout);
 extern long schedule_timeout_idle(long timeout);
-asmlinkage void schedule(void);
+extern asmlinkage void schedule(void);
 extern void schedule_preempt_disabled(void);
 
 extern int __must_check io_schedule_prepare(void);
@@ -1067,6 +1067,13 @@ struct task_struct {
 
 	/* Number of pages to reclaim on returning to userland: */
 	unsigned int			memcg_nr_pages_over_high;
+#endif
+#ifdef CONFIG_CXX_RUNTIME
+        /* Copied from unwind-cxx.h */
+        struct {
+                void *caughtExceptions;
+                unsigned int uncaughtExceptions;
+        } cxa_eh_globals;
 #endif
 
 #ifdef CONFIG_UPROBES
