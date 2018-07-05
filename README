@@ -1,18 +1,6 @@
-Linux kernel
-============
+MOOL kernel - 4.14.41
+=====================
 
-This file was moved to Documentation/admin-guide/README.rst
+This is the MOOL (Minimalistic Object Oriented Linux) variant of the linux kernel version 4.14.41. The conversion was done at DOS LAB IIT Madras July 2018. This kernel can be used for writing C++ device drivers and can be used for developing various security filters for different applications with the help of OO Wrappers provided by the kernel. This project was done under the esteemed guidance of Dr. Dharanipragada Janakiram and Pradeepkumar Gayam.
 
-Please notice that there are several guides for kernel developers and users.
-These guides can be rendered in a number of formats, like HTML and PDF.
-
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.
-
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
-See Documentation/00-INDEX for a list of what is contained in each file.
-
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+For more details visit http://dos.iitm.ac.in/
